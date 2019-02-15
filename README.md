@@ -1,4 +1,4 @@
-## flutter-s
+# flutter-s
 let me tell you why use flutter!
 
 优点：
@@ -38,10 +38,40 @@ export PATH="$PATH:`pwd`/flutter/bin"
 这里的pwd一定要放置为**绝对路径**
 
 
-### 包总结：
+## flutter 总结
+
+flutter借鉴了react的核心思想：**the central idea is that you build your UI out of widget**.
+每一个类都称为一个组件(widget)，例如以下的🌰：
+```
+void main() {
+  runApp(
+    new Center(
+      child: Text(
+        "Hello, flutter",
+        textDirection: TextDirection.ltr,
+      )
+    )
+  )
+}
+```
+这个🌰中，我们能获取到两个信息：
+1. `runApp()`告诉我们组件树的根，即`Center`组件。
+2. `Flutter`会强制让根组件覆盖整个移动屏幕。
+2. 这里用到了两个组件：`Center`和`Text`.
+---
+每一个组件都只有两种状态：
+1. `StateLessWidget`: 
+无状态组件：**meaning that their properties can't change--all values are final**
+2. `StatefulWidget`: 
+有状态组件：至少需要两个类，一个是继承`StatefulWidget`的类和继承`State`的类。
+---
+每一个组件的都必须包含`build`方法, 并且必须包含`build(BuildContext context)`这个参数，不然会报错：**isn't a valid override**.
+
+
+## 包总结：
 `TextStyle`：包含文字的样式，拥有以下几个属性：
 1. `fontFamily`
 2. `fontSize`
 3. `fontStyle`
 4. `fontWeight`
-5. ``
+
