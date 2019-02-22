@@ -42,12 +42,12 @@ class MyScoffold extends StatelessWidget {
               title: Center(
             child: Text(
               'Example Title',
-              style: Theme.of(context).primaryTextTheme.title,
+              style: Theme.of(context).primaryTextTheme.headline,
             ),
           )),
           new Expanded(
             child: new Center(
-              child: new Text("Hello Flutter"),
+              child: new Text("Hello Low Low"),
             ),
           )
         ],
@@ -56,7 +56,7 @@ class MyScoffold extends StatelessWidget {
   }
 }
 
-class MyApp extends StatelessWidget {
+class Ex2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

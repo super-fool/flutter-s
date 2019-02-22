@@ -66,6 +66,24 @@ void main() {
 有状态组件：至少需要两个类，一个是继承`StatefulWidget`的类和继承`State`的类。
 ---
 每一个组件的都必须包含`build`方法, 并且必须包含`build(BuildContext context)`这个参数，不然会报错：**isn't a valid override**.
+---
+为什么会有`state`和`statefulwidget`这两种对象？
+因为它们的生命周期不同。`widget`是一个temporary object, 它用于构建在当前状态下的应用程序展示。
+`Widgets are temporary objects, used to construct a presentation of application in its current state.
+---
+`final`的意义：
+在无状态的组件中，它的内部是没有状态，或者说是没有变量的。如果需要展示某些状态，我们就需要依赖其他的外部组件，通过参数进行传入。而这些参数也需要在组件中再次声明，声明的时候需要加上`final`修饰符。
+```
+class CounterIncrements extends StatelessWidget {
+  CounterIncrements({this.count}); // 声明构造函数
+  final int count; // 使用 final 声明该变量
+  // 。。。
+}
+``` 
+参数也可以传入一个函数
+```
+final VoidCallback onPressed; // onPressed为一个参数
+```
 
 
 ## 包总结：

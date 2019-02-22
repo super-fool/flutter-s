@@ -96,14 +96,14 @@ class RandomWords extends StatefulWidget {
   RandomWordsState createState() => new RandomWordsState();
 }
 
-class MyApp extends StatelessWidget {
+class Ex1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // final wordPair = WordPair.random();
     return MaterialApp(
       title: 'Startup name generator',
       theme: new ThemeData(
-        primaryColor: Colors.white,
+        primaryColor: Colors.amber,
       ),
       home: new RandomWords(),
     );
