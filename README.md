@@ -1,15 +1,17 @@
-# flutter-s
+# K-FLUTTER
 let me tell you why use flutter!
 
-优点：
-1. 组件化，所有的东西都可以作为组件。
-2. 拥有丰富的组件。
-3. 热重载。
-4. 具有差异化主题，使用主题来针对Android和iOS定制样式。
+> 优点：
+> 1. 组件化，所有的东西都可以作为组件。
+> 2. 拥有丰富的组件。
+> 3. 热重载。
+> 4. 具有差异化主题，使用主题来针对Android和iOS定制样式。
+
 
 ios版本开发需要xcode，android版本开发需要Android studio。
 
-### IOS开发
+## IOS开发
+
 当我们装好xcode，我们可以使用以下命令来打开虚拟机：
 `open -a Simulator`: -a 代表使用指定程序来打开。
 
