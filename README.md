@@ -23,11 +23,13 @@ VSCode及Android Studio开发时,都需要下载`Flutter`插件. 可以通过该
 
 插件存放地址:`flutter\.pub-cache\hosted`.
 
+安装插件小提示: 每次安装完插件,都需要重启VSCode, 不然识别不了新安装的插件!
+
 
 
 ## Flutter 编码规范
 
-1. 所有的类命名必须使用：`UpperCamelCase`
+1. 所有的类命名必须使用：`UpperCamelCase`,别名也叫:` Pascal case`
 
 ## Dart
 
