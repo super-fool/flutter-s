@@ -15,6 +15,16 @@ VSCode及Android Studio开发时,都需要下载`Flutter`插件. 可以通过该
 
 所有的`widget`都是为了描述屏幕中的内容如何`display`,我们将所有的`widget`都放置在`build`方法中,通过`return`来返回.
 
+所有内置组件都存放在`flutter`目录下的:`C:\flutter\packages\flutter\lib`中.
+
+所有的插件都可以在[Pub site](https://pub.flutter-io.cn/flutter)中获取. 
+
+添加插件:我们将插件名及版本注入在**pubspec.yaml**文件中的**dependencies**中, 然后右键点击`pubspec.yaml`选择`get packages`即可下载(其实,当你将该pubspec保存后会自动的帮你下载). 我们也可以用命令下载:` flutter packages get`.
+
+插件存放地址:`flutter\.pub-cache\hosted`.
+
+
+
 ## Flutter 编码规范
 
 1. 所有的类命名必须使用：`UpperCamelCase`
