@@ -1,29 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:english_words/english_words.dart';
+import './pages//index_page.dart';
 void main() => runApp(MyApp());
-
 class MyApp extends StatelessWidget {
+  // const MyApp({Key key}) : super(key: key);
 
   @override
-
   Widget build(BuildContext context) {
-    final wordPair = WordPair.random();
-    return MaterialApp(
-      title: 'This is First Flutter App',
-      // 以下所有widget都是及程序Material.
-      home: Scaffold(
-        // 导航栏
-        appBar: AppBar(
-          title: Text('Welcome to Flutter'),
+    return Container(
+      child: MaterialApp(
+        title: '测试',
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          primaryColor: Colors.amberAccent,
         ),
-        //
-        body: Center(
-          // child: Text('Hello World'),
-          child: Text(wordPair.asPascalCase),
-        ),
+        home: IndexPage(),
       ),
     );
   }
-
-
 }
