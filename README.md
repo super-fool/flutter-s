@@ -29,7 +29,7 @@ VSCode及Android Studio开发时,都需要下载`Flutter`插件. 可以通过该
 
 `flutter create`: 创建一个项目
 `flutter run`: 运行项目
-
+`flutter devices`: 查看机器设备
 
 ## Flutter 编码规范
 
