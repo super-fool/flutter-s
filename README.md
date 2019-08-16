@@ -6,6 +6,11 @@ let me tell you why use flutter!
 > 2. 拥有丰富的组件。
 > 3. 热重载。
 > 4. 具有差异化主题，使用主题来针对Android和iOS定制样式。
+> 5. WebView是在app运行时进行编译, 而`Flutter`是在软件安装后即编译完成.
+
+## Flutter 思想
+
+- `widgets are immutable`: 组件不能直接更新, 而是去更新它的`State`.
 
 ## 简单教程
 
@@ -25,7 +30,7 @@ VSCode及Android Studio开发时,都需要下载`Flutter`插件. 可以通过该
 
 安装插件小提示: 每次安装完插件,都需要重启VSCode, 不然识别不了新安装的插件!
 
-### flutter 常用命令
+### Flutter 常用命令
 
 - `flutter create`: 创建一个项目
 - `flutter run`: 运行项目
