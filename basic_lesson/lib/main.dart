@@ -8,8 +8,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Startup Name Generator',
-      // debugShowCheckedModeBanner: false,
       home: RandomWords(),
+      theme: ThemeData(
+        primaryColor: Colors.white,
+      ),
     );
   }
 }
@@ -20,9 +22,42 @@ class RandomWords extends StatefulWidget {
 }
 
 class _RandomWordsState extends State<RandomWords> {
-  final List<WordPair> _suggestions = <WordPair>[]; // 单词对
-  final Set<WordPair> _saved = new Set<WordPair>();
+  final _suggestions = new List<WordPair>(); // 单词对
+  final _saved = new Set<WordPair>();
   final _biggerFont = const TextStyle(fontSize: 18.0); //增大字体大小
+
+  void _pushSaved() {
+    Navigator.of(context)
+        .push(new MaterialPageRoute(builder: (BuildContext context) {
+      final tiles = _saved.map((WordPair pair) {
+        return ListTile(
+          title: Text(
+            pair.asPascalCase,
+            style: _biggerFont,
+          ),
+        );
+      });
+
+      final divided = ListTile.divideTiles(
+        context: context,
+        tiles: tiles,
+      ).toList();
+
+      return Scaffold(
+        appBar: AppBar(
+          title: Text('Saved Suggestions'),
+        ),
+        body: divided.length == 0
+            ? new Center(
+                child: Text('No Saved Suggestions'),
+              )
+            : new ListView(
+                children: divided,
+              ),
+      );
+    }));
+  }
+
   @override
   Widget build(BuildContext context) {
     Widget _buildRow(WordPair pair) {
@@ -37,6 +72,8 @@ class _RandomWordsState extends State<RandomWords> {
           alreadySaved ? Icons.favorite : Icons.favorite_border,
           color: alreadySaved ? Colors.red : null,
         ),
+        // 每一次更新都会重构build方法
+
         onTap: () {
           setState(() {
             if (alreadySaved) {
@@ -66,6 +103,12 @@ class _RandomWordsState extends State<RandomWords> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Startup name Generator'),
+        actions: <Widget>[
+          new IconButton(
+            icon: Icon(Icons.list),
+            onPressed: _pushSaved,
+          ),
+        ],
       ),
       body: _buildSuggestions(),
     );
