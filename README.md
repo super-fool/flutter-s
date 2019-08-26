@@ -6,7 +6,8 @@ let me tell you why use flutter!
 > 2. 拥有丰富的组件。
 > 3. 热重载。
 > 4. 具有差异化主题，使用主题来针对Android和iOS定制样式。
-> 5. WebView是在app运行时进行编译, 而`Flutter`是在软件安装后即编译完成.
+> 5. `WebView`是在app运行时进行编译, 而`Flutter`是在软件安装后即编译完成.
+> 6. `JS`只能通过`WebView`中间介质获取`OEM Widget`, however, `Flutter`直接可以调用.
 
 ## Flutter 思想
 
@@ -40,7 +41,7 @@ VSCode及Android Studio开发时,都需要下载`Flutter`插件. 可以通过该
 
 1. 所有的类命名必须使用：`UpperCamelCase`,别名也叫:` Pascal case`
 2. 前缀为`_`的类, 会强制变成私有类
-
+3. `Widget`的build必须要返回一个`Widget`.
 ## Dart
 
 1. 单行函数可以使用`=>`来简写.
