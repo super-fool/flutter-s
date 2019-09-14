@@ -9,11 +9,11 @@ let me tell you why use flutter!
 > 5. `WebView`是在app运行时进行编译, 而`Flutter`是在软件安装后即编译完成.
 > 6. `JS`只能通过`WebView`中间介质获取`OEM Widget`, however, `Flutter`直接可以调用.
 
-## Flutter 思想
+## 1. Flutter 思想
 
 - `widgets are immutable`: 组件不能直接更新, 而是去更新它的`State`.
 
-## 简单教程
+## 2. 简单教程
 
 ios版本开发需要xcode，android版本开发需要Android studio。
 
@@ -37,16 +37,16 @@ VSCode及Android Studio开发时,都需要下载`Flutter`插件. 可以通过该
 - `flutter run`: 运行项目
 - `flutter devices`: 查看机器设备
 
-## Flutter 编码规范
+## 3. Flutter 编码规范
 
 1. 所有的类命名必须使用：`UpperCamelCase`,别名也叫:` Pascal case`
 2. 前缀为`_`的类, 会强制变成私有类
 3. `Widget`的build必须要返回一个`Widget`.
-## Dart
+## 4. Dart
 
 1. 单行函数可以使用`=>`来简写.
 
-## Android 开发
+## 5. Android 开发
 
 ### 什么是 Gradle
 
@@ -55,7 +55,7 @@ Gradle: 一个`基于Groovy语言`开发的`自动化的构建工具`，Android 
 
 
 
-## IOS 开发
+## 6. IOS 开发
 
 当我们装好xcode，我们可以使用以下命令来打开虚拟机：
 `open -a Simulator`: -a 代表使用指定程序来打开。
@@ -72,7 +72,7 @@ Gradle: 一个`基于Groovy语言`开发的`自动化的构建工具`，Android 
 
 3. `build()`方法用来描述如何展现一个组件。
 
-## ⚠注意️
+## 7. ⚠注意️
 1. 更新环境变量：
 ```
 export PUB_HOSTED_URL=https://pub.flutter-io.cn //国内用户需要设置
@@ -85,7 +85,7 @@ export PATH="$PATH:`pwd`/flutter/bin"
 这里的pwd一定要放置为**绝对路径**
 
 
-## flutter 总结
+## 8. flutter 总结
 
 flutter借鉴了react的核心思想：**the central idea is that you build your UI out of widget**.
 每一个类都称为一个组件(widget)，例如以下的🌰：
@@ -137,10 +137,19 @@ final VoidCallback onPressed; // onPressed为一个参数
 ```
 
 
-## 包总结：
+## 9. Widget总结：
+
+### Text
+
+1. Text: 单一样式.
+2. TextRich: 使用`TextSpan`来生成不同样式的字段.
+
+> 注意: 两者都必须注意, 有时候我们需要添加`textDirection`来注明方向, 不然会报错.
+
 `TextStyle`：包含文字的样式，拥有以下几个属性：
 1. `fontFamily`
 2. `fontSize`
 3. `fontStyle`
 4. `fontWeight`
 
+## 
